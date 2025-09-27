@@ -1,4 +1,4 @@
-# Ellibria - wallpaper fetcher
+# 🦋 Ellibria - wallpaper fetcher
 
 A lightweight Linux script to fetch and apply wallpapers based on user-defined tags. It supports previewing images in the terminal and works across various desktop environments.
 
