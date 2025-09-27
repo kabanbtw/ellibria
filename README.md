@@ -2,6 +2,9 @@
 
 A lightweight Linux script to fetch and apply wallpapers based on user-defined tags. It supports previewing images in the terminal and works across various desktop environments.
 
+![](https://ссылка_на_gif.gif)
+
+
 ## ✨ Features
 
 - Search for wallpapers using tags (e.g., `anime`, `landscape`, `cat_ears`).
