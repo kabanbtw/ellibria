@@ -8,7 +8,7 @@ A lightweight Linux script to fetch and apply wallpapers based on user-defined t
 - Display image previews in the terminal (supports Kitty and Ghostty).
 - Prompt for applying wallpapers.
 - Automatically apply wallpapers based on your desktop environment (GNOME, KDE, XFCE, Cinnamon, Budgie, etc.).
-- Save downloaded wallpapers to `~/Pictures/wallpapers`.
+- Save downloaded wallpapers to `~/Pictures/wallpapers`. 
 
 ## 🚀 Installation
 
