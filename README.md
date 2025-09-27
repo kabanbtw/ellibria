@@ -90,6 +90,12 @@ A: Unlike `kon`, this script isn't tied to Konachan and supports any API. It’s
 
 Crafted with ❤️ for Arch Linux and other distributions, prioritizing simplicity and a beautiful desktop experience.
 
+## 🌐 Contact
+
+For discussions or suggestions, reach out:
+- **Email**: epidermis_essential@proton.me
+- **Inktree**: [here](https://linktr.ee/fastarcher)
+
 ## 📜 License
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
