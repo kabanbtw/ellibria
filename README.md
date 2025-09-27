@@ -92,4 +92,4 @@ Crafted with ❤️ for Arch Linux and other distributions, prioritizing simplic
 
 ## 📜 License
 
-[MIT License](LICENSE)
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
