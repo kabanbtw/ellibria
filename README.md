@@ -52,10 +52,15 @@ Run the script and follow the prompts:
 ```bash
 ./ellibria.sh
 ```
+1. Enter a tag (e.g., anime ) to search for wallpapers. The script fetches and displays a random wallpaper.
 
-1. Enter tags (e.g., `anime blonde_hair`).
-2. The script fetches and displays a random wallpaper.
-3. Type `y` to apply or `n` to fetch another.
+2. Choose an action: y: apply the wallpaper, n: fetch another wallpaper with the same tag, t: enter a new tag to search for different wallpapers
+   
+3. exit: quit the script.
+
+
+
+
 
 ## 🌍 Supported Desktop Environments
 
