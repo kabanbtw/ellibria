@@ -47,7 +47,7 @@ sudo pacman -S curl jq kitty
 
 Run the script and follow the prompts:
 ```bash
-./wallpaper.sh
+./ellibria.sh
 ```
 
 1. Enter tags (e.g., `anime blonde_hair`).
