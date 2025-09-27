@@ -2,7 +2,7 @@
 
 A lightweight Linux script to fetch and apply wallpapers based on user-defined tags. It supports previewing images in the terminal and works across various desktop environments.
 
-![](https://github.com/kabanbtw/ellibria/blob/main/image.png)
+![](https://github.com/fast-archer/ellibria/blob/main/image.png)
 
 
 ## ✨ Features
@@ -17,7 +17,7 @@ A lightweight Linux script to fetch and apply wallpapers based on user-defined t
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/kabanbtw/ellibria.git
+   git clone https://github.com/fast-archer/ellibria.git
    cd ellibria
    ```
 
