@@ -14,18 +14,18 @@ A lightweight Linux script to fetch and apply wallpapers based on user-defined t
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/wallpaper-fetcher.git
-   cd wallpaper-fetcher
+   git clone https://github.com/kabanbtw/ellibria.git
+   cd ellibria
    ```
 
 2. Make the script executable:
    ```bash
-   chmod +x wallpaper.sh
+   chmod +x ellibria.sh
    ```
 
 3. Run the script:
    ```bash
-   ./wallpaper.sh
+   ./ellibria.sh
    ```
 
 ## 🔧 Dependencies
