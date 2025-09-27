@@ -4,6 +4,20 @@
 WALLPAPER_DIR="$HOME/Pictures/Wallpapers"
 mkdir -p "$WALLPAPER_DIR"
 
+# === ЛОГО ===
+print_logo() {
+cat << "EOF"
+  ______ _ _ _ _          _       
+ |  ____| | (_) |        (_)      
+ | |__  | | |_| |__  _ __ _  __ _ 
+ |  __| | | | | '_ \| '__| |/ _` |
+ | |____| | | | |_) | |  | | (_| |
+ |______|_|_|_|_.__/|_|  |_|\__,_| 
+
+       🦋  Ellibria - Wallpaper Fetcher 🦋
+EOF
+}
+
 # Проверка установленного DE
 detect_de() {
     if [ -n "$XDG_CURRENT_DESKTOP" ]; then
@@ -46,6 +60,9 @@ set_wallpaper() {
     esac
 }
 
+# Печатаем логотип
+print_logo
+
 # Основной цикл
 while true; do
     read -p "Введи тег для поиска (или 'exit' для выхода): " TAG
@@ -53,33 +70,37 @@ while true; do
 
     echo "🔎 Ищу обои по тегу: $TAG"
 
-    # Получаем случайное изображение
-    URL=$(curl -s "https://wallhaven.cc/api/v1/search?q=$TAG&sorting=random" | jq -r '.data[0].path')
+    while true; do
+        # Получаем случайное изображение
+        URL=$(curl -s "https://wallhaven.cc/api/v1/search?q=$TAG&sorting=random" | jq -r '.data[0].path')
 
-    if [ -z "$URL" ] || [ "$URL" == "null" ]; then
-        echo "❌ Ничего не найдено по тегу '$TAG'"
-        continue
-    fi
+        if [ -z "$URL" ] || [ "$URL" == "null" ]; then
+            echo "❌ Ничего не найдено по тегу '$TAG'"
+            break
+        fi
 
-    FILE="$WALLPAPER_DIR/$(basename "$URL")"
-    curl -s -L "$URL" -o "$FILE"
+        FILE="$WALLPAPER_DIR/$(basename "$URL")"
+        curl -s -L "$URL" -o "$FILE"
 
-    # Показываем превью (ghostty/kitty поддерживают картинки)
-    if command -v kitty &>/dev/null; then
-        kitty +kitten icat "$FILE"
-    elif command -v viu &>/dev/null; then
-        viu "$FILE"
-    else
-        echo "📂 Обои сохранены: $FILE"
-    fi
+        # Показываем превью (ghostty/kitty поддерживают картинки)
+        if command -v kitty &>/dev/null; then
+            kitty +kitten icat "$FILE"
+        elif command -v viu &>/dev/null; then
+            viu "$FILE"
+        else
+            echo "📂 Обои сохранены: $FILE"
+        fi
 
-    # Спрашиваем про установку
-    read -p "Применить эти обои? (y/n): " ANSWER
-    if [[ "$ANSWER" == "y" ]]; then
-        set_wallpaper "$FILE"
-        echo "✅ Обои применены!"
-        break
-    else
-        echo "⏭️ Пропускаем, ищем другие..."
-    fi
+        # Спрашиваем про установку
+        read -p "Применить эти обои? (y/n/exit): " ANSWER
+        if [[ "$ANSWER" == "y" ]]; then
+            set_wallpaper "$FILE"
+            echo "✅ Обои применены!"
+            echo "♻️  Ищу следующие обои по тегу '$TAG'..."
+        elif [[ "$ANSWER" == "exit" ]]; then
+            exit 0
+        else
+            echo "⏭️ Пропускаем, ищем другие..."
+        fi
+    done
 done
